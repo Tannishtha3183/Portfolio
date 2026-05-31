@@ -1,4 +1,3 @@
-/* --- DESIGN TOKENS & THEME --- */
 :root {
   --bg-dark: #08120D;
   --deep-forest: #10281C;
@@ -23,7 +22,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-dark); }
 ::-webkit-scrollbar-thumb { background: var(--moss); border-radius: 10px; }
@@ -33,7 +31,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; }
 h2 { color: var(--magic-glow); }
 p { line-height: 1.6; color: rgba(223, 244, 255, 0.8); }
 
-/* --- BACKGROUND & PARTICLES --- */
 #forest-bg {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
@@ -56,7 +53,6 @@ p { line-height: 1.6; color: rgba(223, 244, 255, 0.8); }
   animation: drift linear infinite, flicker 3s ease-in-out infinite alternate;
 }
 
-/* --- ANIMATIONS --- */
 @keyframes drift {
   from { transform: translateY(100vh) translateX(0); }
   to { transform: translateY(-100px) translateX(50px); }
@@ -70,7 +66,6 @@ p { line-height: 1.6; color: rgba(223, 244, 255, 0.8); }
   50% { transform: translateY(-15px); }
 }
 
-/* --- GLOBAL CLASSES --- */
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
@@ -91,13 +86,11 @@ section {
   z-index: 1;
 }
 
-/* --- SECTION 1: ENTRANCE --- */
 #entrance { text-align: center; }
 .hero-title { font-size: 5vw; letter-spacing: 0.1em; margin-bottom: 1rem; color: var(--magic-glow); animation: float 6s ease-in-out infinite; }
 .typewriter-text { font-size: 1.5rem; color: var(--moonlight); border-right: 2px solid var(--magic-glow); white-space: nowrap; overflow: hidden; margin: 0 auto; }
 .scroll-down { position: absolute; bottom: 5vh; font-family: var(--font-display); color: var(--moss); animation: float 2s infinite; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem;}
 
-/* --- SECTION 3: EXPANDING ROOTS (ABOUT) --- */
 .roots-container {
   display: flex; gap: 1rem; width: 100%; max-width: 1000px; height: 400px;
 }
@@ -118,7 +111,6 @@ section {
 .root-content { opacity: 0; transition: opacity 0.4s 0.2s; height: 0; }
 .root-panel.active .root-content { opacity: 1; height: auto; }
 
-/* --- SECTION 4: ENCHANTED ARSENAL (GLOWING BRANCHES) --- */
 .skill-container { display: flex; flex-direction: column; gap: 3rem; width: 100%; max-width: 900px; }
 .skill-branch { border-left: 2px solid var(--forest-green); padding-left: 2.5rem; position: relative; }
 .skill-branch::before {
@@ -134,7 +126,6 @@ section {
 }
 .skill-tag:hover { background: rgba(31, 90, 56, 0.3); border-color: var(--magic-glow); box-shadow: 0 0 15px rgba(152, 255, 152, 0.3); transform: translateY(-3px); }
 
-/* --- SECTION 5: CANOPY (PROJECTS) --- */
 .filter-branches { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 4rem; flex-wrap: wrap; }
 .branch-btn {
   background: transparent; color: var(--moonlight); border: 1px solid var(--moss);
@@ -157,7 +148,6 @@ section {
 .project-leaf:hover .project-category { color: var(--magic-glow); }
 .project-info h3 { color: var(--moonlight); font-size: 1.6rem; }
 
-/* --- SECTION 7: THE UNDERGROWTH (CERTIFICATIONS GROVE) --- */
 #hidden-forest { text-align: center; }
 .grove-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;
@@ -178,24 +168,27 @@ section {
 .grove-stone p { color: var(--crystal); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.4s;}
 .grove-stone:hover p { color: var(--magic-glow); }
 
-/* --- SECTION 8: CONTACT --- */
-.contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1000px; width: 100%; margin: 0 auto; }
-.contact-form { display: flex; flex-direction: column; gap: 1.5rem; background: rgba(16, 40, 28, 0.3); padding: 2.5rem; border-radius: 12px; border: 1px solid rgba(152, 255, 152, 0.1); }
-.input-field {
-  background: transparent; border: none; border-bottom: 1px solid var(--moss); color: var(--moonlight);
-  padding: 1rem 0; font-family: var(--font-body); outline: none; transition: 0.3s; resize: vertical;
+.contact-centered { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+  max-width: 800px; 
+  width: 100%; 
+  margin: 0 auto; 
+  background: rgba(16, 40, 28, 0.3); 
+  padding: 4rem 2rem; 
+  border-radius: 16px; 
+  border: 1px solid rgba(152, 255, 152, 0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
-.input-field:focus { border-color: var(--magic-glow); box-shadow: 0 10px 10px -10px rgba(152, 255, 152, 0.2); }
-.submit-btn {
-  background: transparent; color: var(--magic-glow); border: 1px solid var(--magic-glow);
-  padding: 1rem; border-radius: 30px; cursor: pointer; font-family: var(--font-display);
-  font-size: 1.1rem; transition: 0.3s; margin-top: 1rem; letter-spacing: 1px;
-}
-.submit-btn:hover { background: rgba(152, 255, 152, 0.1); box-shadow: 0 0 15px rgba(152, 255, 152, 0.2); }
 
-/* --- SOCIAL LINK BUTTONS --- */
+.centered-links {
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
 .social-links { 
-  margin-top: 2rem; 
   display: flex; 
   gap: 1rem; 
   flex-wrap: wrap; 
@@ -221,7 +214,6 @@ section {
   color: var(--magic-glow); 
 }
 
-/* --- MODALS --- */
 .modal-overlay {
   position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(8, 18, 13, 0.98);
   z-index: 9999; display: flex; justify-content: center; align-items: center;
@@ -238,7 +230,6 @@ section {
 #modal-title { font-size: 3.5rem; margin-bottom: 1.5rem; color: var(--magic-glow); }
 #modal-desc { font-size: 1.2rem; line-height: 1.8; color: var(--moonlight); }
 
-/* Mobile Adaptations */
 @media (max-width: 768px) {
   .roots-container { flex-direction: column; height: auto; }
   .root-panel h3 { transform: none; position: relative; bottom: 0; left: 0; margin-bottom: 1rem; }
