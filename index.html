@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tannishtha Verma | The World Tree Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="forest-bg"></div>
+  <div id="particle-layer"></div>
+
+  <section id="entrance">
+    <h1 class="hero-title">Tannishtha Verma</h1>
+    <div class="typewriter-text" id="typewriter"></div>
+    <div class="scroll-down">Descend into the roots</div>
+  </section>
+
+  <section id="roots">
+    <h2 class="section-title fade-up">Roots of Experience</h2>
+    <div class="roots-container fade-up">
+      <div class="root-panel active" onclick="toggleRoot(this)">
+        <h3>The Seed</h3>
+        <div class="root-content">
+          <p>My journey is rooted in academic excellence. I am currently pursuing a B.Tech in Artificial Intelligence and Data Science at Koneru Lakshmaiah Education Foundation, holding a strong 9.4 GPA.</p>
+        </div>
+      </div>
+      <div class="root-panel" onclick="toggleRoot(this)">
+        <h3>The Sprout</h3>
+        <div class="root-content">
+          <p>I have cultivated a solid foundation in programming languages such as Python and Java. I excel in debugging, code review, and version control, focusing deeply on delivering high-quality, minimal-error code.</p>
+        </div>
+      </div>
+      <div class="root-panel" onclick="toggleRoot(this)">
+        <h3>Deep Mycelium</h3>
+        <div class="root-content">
+          <p>Operating well in both individual and collaborative team capacities, I seek to leverage my time management, critical thinking, and problem-solving abilities to enhance business performance as a Software Engineering Intern.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title fade-up">Enchanted Arsenal</h2>
+    <div class="skill-container fade-up">
+      
+      <div class="skill-branch">
+        <h3>Frontend Crafting</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+        </div>
+      </div>
+
+      <div class="skill-branch" style="border-color: var(--firefly);">
+        <h3 style="color: var(--firefly);">Backend Logic</h3>
+        <div class="skill-tags">
+          <span class="skill-tag" style="border-color: var(--firefly); color: var(--firefly);">Python</span>
+          <span class="skill-tag" style="border-color: var(--firefly); color: var(--firefly);">Java</span>
+          <span class="skill-tag" style="border-color: var(--firefly); color: var(--firefly);">Node.js</span>
+          <span class="skill-tag" style="border-color: var(--firefly); color: var(--firefly);">Spring Boot</span>
+        </div>
+      </div>
+
+      <div class="skill-branch" style="border-color: var(--crystal);">
+        <h3 style="color: var(--crystal);">Data & Systems</h3>
+        <div class="skill-tags">
+          <span class="skill-tag" style="border-color: var(--crystal); color: var(--crystal);">MySQL</span>
+          <span class="skill-tag" style="border-color: var(--crystal); color: var(--crystal);">PostgreSQL</span>
+          <span class="skill-tag" style="border-color: var(--crystal); color: var(--crystal);">MongoDB</span>
+          <span class="skill-tag" style="border-color: var(--crystal); color: var(--crystal);">Git & GitHub</span>
+          <span class="skill-tag" style="border-color: var(--crystal); color: var(--crystal);">Data Visualization</span>
+        </div>
+      </div>
+
+      <div class="skill-branch" style="border-color: var(--moonlight);">
+        <h3 style="color: var(--moonlight);">Innate Magic (Soft Skills)</h3>
+        <div class="skill-tags">
+          <span class="skill-tag" style="border-color: var(--moonlight); color: var(--moonlight);">Problem Solving</span>
+          <span class="skill-tag" style="border-color: var(--moonlight); color: var(--moonlight);">Critical Thinking</span>
+          <span class="skill-tag" style="border-color: var(--moonlight); color: var(--moonlight);">Teamwork & Collaboration</span>
+          <span class="skill-tag" style="border-color: var(--moonlight); color: var(--moonlight);">Time Management</span>
+          <span class="skill-tag" style="border-color: var(--moonlight); color: var(--moonlight);">Multitasking</span>
+          <span class="skill-tag" style="border-color: var(--moonlight); color: var(--moonlight);">Positive Attitude</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="canopy">
+    <h2 class="section-title fade-up">Canopy of Creations</h2>
+    
+    <div class="filter-branches fade-up">
+      <button class="branch-btn active" onclick="filterProjects('all')">All Realms</button>
+      <button class="branch-btn" onclick="filterProjects('fullstack')">Full-Stack</button>
+      <button class="branch-btn" onclick="filterProjects('web')">Web Dynamics</button>
+    </div>
+
+    <div class="gallery-grid fade-up">
+      <div class="project-leaf" data-category="fullstack" onclick="openModal('Smart Restaurant Management', 'A robust full-stack platform designed to streamline operations, optimize inventory, and enhance owner/staff experience. Built using Spring Boot for backend resilience, React for dynamic frontend delivery, and MySQL for robust database management.')">
+        <div class="project-info">
+          <span class="project-category">Full-Stack Development</span>
+          <h3>Smart Restaurant System</h3>
+        </div>
+      </div>
+      <div class="project-leaf" data-category="web" onclick="openModal('Online Game Zone', 'A web platform offering interactive browser-based games focused on responsive UI and seamless user experience. Engineered entirely from the ground up utilizing HTML, CSS, and dynamic JavaScript logic.')" style="border-radius: 60px 12px 60px 12px;">
+        <div class="project-info">
+          <span class="project-category">Web Dynamics</span>
+          <h3>Online Game Zone</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hidden-forest">
+    <h2 class="section-title fade-up">The Undergrowth</h2>
+    <p class="fade-up" style="max-width: 600px; margin: 0 auto 1rem;">Beyond core development, my passion lies in exploring emerging technologies. These illuminated stones represent my recognized pursuit of AI and Cloud systems.</p>
+    
+    <div class="grove-grid fade-up">
+      <div class="grove-stone">
+        <h4>Azure AI Fundamentals (AI-900)</h4>
+        <p>Microsoft Certified • 2026</p>
+      </div>
+      <div class="grove-stone">
+        <h4>Certified Cloud Practitioner</h4>
+        <p>Amazon Web Services • 2026</p>
+      </div>
+      <div class="grove-stone">
+        <h4>Git and GitHub Certification</h4>
+        <p>IBM / Coursera • 2025</p>
+      </div>
+      <div class="grove-stone">
+        <h4>Python Basics Certification</h4>
+        <p>University of Michigan • 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title fade-up" style="color: var(--moonlight);">Moonlit Clearing</h2>
+    <div class="contact-wrapper fade-up">
+      <div class="contact-lore">
+        <h3 style="font-size: 2.5rem; margin-bottom: 1rem;">Send a Raven</h3>
+        <p>The journey through the World Tree ends here, but our collaboration is just beginning. Let's build something remarkable.</p>
+        
+        <div style="margin-top: 3rem; color: var(--moss);">
+          <p style="margin-bottom: 0.5rem;">✦ Hyderabad, Telangana 500018</p>
+          <p style="margin-bottom: 0.5rem;">✦ vermanishtha3@gmail.com</p>
+          <p>✦ +91 7863020024</p>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/tannishtha-verma-558218261" target="_blank" class="social-btn">LinkedIn</a>
+          <a href="https://github.com/Tannishtha3183" target="_blank" class="social-btn">GitHub</a>
+        </div>
+
+      </div>
+      
+      <form class="contact-form" action="https://formsubmit.co/vermanishtha3@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="#">
+        
+        <input type="text" name="Name" class="input-field" placeholder="Your Name, Traveler" required>
+        <input type="email" name="Email" class="input-field" placeholder="Your Signal (Email)" required>
+        <textarea name="Message" class="input-field" rows="4" placeholder="Inscribe your message here..." required></textarea>
+        
+        <button type="submit" class="submit-btn">Cast Message</button>
+      </form>
+
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="main-modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('main-modal')">&times;</span>
+      <h2 id="modal-title">Title</h2>
+      <p id="modal-desc">Description goes here.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
